@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbie Theme Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="calculator">
+        <div class="brand">Casio</div>
+        <div class="display-container">
+            <input type="text" id="display" disabled>
+        </div>
+        <div class="buttons">
+            <button class="btn" data-watermark="7" onclick="appendNumber('7')">7</button>
+            <button class="btn" data-watermark="8" onclick="appendNumber('8')">8</button>
+            <button class="btn" data-watermark="9" onclick="appendNumber('9')">9</button>
+            <button class="btn operator" data-watermark="*" onclick="appendOperator('*')">*</button>
+            <button class="btn" data-watermark="4" onclick="appendNumber('4')">4</button>
+            <button class="btn" data-watermark="5" onclick="appendNumber('5')">5</button>
+            <button class="btn" data-watermark="6" onclick="appendNumber('6')">6</button>
+            <button class="btn operator" data-watermark="-" onclick="appendOperator('-')">-</button>
+            <button class="btn" data-watermark="1" onclick="appendNumber('1')">1</button>
+            <button class="btn" data-watermark="2" onclick="appendNumber('2')">2</button>
+            <button class="btn" data-watermark="3" onclick="appendNumber('3')">3</button>
+            <button class="btn operator" data-watermark="+" onclick="appendOperator('+')">+</button>
+            <button class="btn" data-watermark="%" onclick="appendPercent()">%</button>
+            <button class="btn" data-watermark="0" onclick="appendNumber('0')">0</button>
+            <button class="btn" data-watermark="." onclick="appendPoint()">.</button>
+            <button class="btn operator" data-watermark="/" onclick="appendOperator('/')">/</button>
+            <button class="btn operator" data-watermark="=" onclick="calculate()">=</button>
+            <button class="btn" data-watermark="⌫" onclick="backspace()">⌫</button>
+            <button class="btn" data-watermark="C" onclick="clearDisplay()">C</button>
+            <button class="btn" data-watermark="Ans" onclick="appendAns()">Ans</button>
+        </div>
+    </div>
+</body>
+</html>

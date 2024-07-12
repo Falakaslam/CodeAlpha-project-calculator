@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8c3d4;
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: fit-content;
+    position: relative;
+    border: 4px solid #f37299; /* Enhanced border color */
+}
+
+.brand {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #f37299;
+    font-weight: bold;
+}
+
+.display-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.display-container input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f8e5ee;
+    font-size: 2em;
+    text-align: right;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    background: linear-gradient(135deg, #f37ea1, #fec0fd); /* Lighter purple to pink gradient */
+    border: none;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s, color 0.2s; /* Added color transition */
+    position: relative;
+    overflow: hidden;
+    text-shadow: none; /* Remove text shadow */
+}
+
+.btn::before {
+    content: attr(data-watermark);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.btn::after {
+    content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Cpath fill="rgba(255, 255, 255, 0.2)" d="M12 2C8.686 2 6 4.686 6 8c0 2.538 1.615 5.55 4.071 8.257 1.048 1.14 2.204 2.208 3.258 3.157C14.214 19.464 15.214 19 16 19s1.786.464 2.671 1.414c1.054-.95 2.21-2.017 3.258-3.157C16.385 13.55 18 10.538 18 8c0-3.314-2.686-6-6-6zm0 2a4 4 0 0 1 4 4c0 1.1-.512 2.512-1.857 4.145-1.185 1.304-2.598 2.489-3.633 3.342C10.598 14.634 9.185 13.449 8 12.145 6.512 10.512 6 9.1 6 8a4 4 0 0 1 4-4z" /%3E%3C/svg%3E');
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 15%;
+    height: 15%;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.btn:hover::after {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #f56792, #fdfdfe); /* Adjusted gradient colors */
+    transform: scale(1.05);
+    color: #e5065f; /* Dark pink text color on hover */
+}
